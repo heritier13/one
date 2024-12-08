@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    text-align: center;
+}
+#form{
+    text-align: center;
+
+}
+body{
+    background-color: #f8f8ff;
+    
+
+}
+#logo{
+    float: right;
+    width: 80px;
+    margin:20px;
+    border-radius: 4em;
+}
+#nava{
+    float: left;
+    background-color: gray;
+    padding: 20px;
+    display: block;
+    overflow:hidden;
+    color: white;
+    margin: 20px;
+
+
+
+}
+#fisher{
+    border: black 1px solid;
+    background-color: white;
+    box-shadow: black 40px;
+    margin: 30px;
+    width: fit-content;
+    display: inline-flex;
+    text-align: center;
+    border: 2px white solid;
+    border-radius: 1em;
+    
+
+}
+#lg{
+    align-items: center;
+    
+}
+#imgg{
+    width: 400px;
+    height: 70px;
+}
+li:hover{
+    background-color: transparent;
+    border: 1px black solid;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    display: block;
+    float: left;
+    margin: 6px;
+    
+    background-color: black;
+    border-radius: 12px;
+    padding: 15px;
+    color:white;
+}
+input{
+    width: 435px;
+    outline: none;
+    font-family: arial;
+    margin-inline-end: 4px;
+    text-align: center;
+    font-size: 17px;
+    border: 1px rgb(219, 225, 226) solid;
+    border-radius: 0.7em;
+    margin: 5px;
+    height: 45px;
+    
+    
+
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px;
+    margin: 5px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+::placeholder{
+    text-align: center;
+    color:rgb(219, 225, 226);
+    font-family: arial;
+    font-size: 15px;
+}
+
+a{
+    font-family:arial ;
+    text-decoration: none;
+    color:blue;
+    margin: 7px;
+
+}
+a:hover{
+    text-decoration: underline;
+
+}
+#btn{
+    background-color: blue;
+    color: white;
+    border: 1px blue solid;
+    font-family: arial;
+    
+   
+
+}
+#btn:hover{
+    color: white;
+    background-color: blueviolet;
+}
