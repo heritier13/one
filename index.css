@@ -6,6 +6,9 @@
     text-align: center;
 
 }
+#ico{
+    border-radius:1em;
+}
 body{
     background-color: #f8f8ff;
     
