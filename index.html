@@ -16,7 +16,7 @@
             <input type="username" id="username" placeholder="Email or phone number" name="username"><br>
             <input type="password" id="password" placeholder="password" name="password" ><br>
             <a href="#"><input  type="submit"  name="log in"   id="btn"><br></a>
-             <button  onclick="fn1()"> Check  </button>
+            <button onclick="signUp()">Butoon</button>
             <a href="#">Forgot account? </a><a href="">sign up</a>
         </div>
     </div>
@@ -40,18 +40,22 @@
     
   
     // Initialize Firebase
-    function fno(){
-        window.alert("harahiye")
-    }
     const app = initializeApp(firebaseConfig);
-    function sendMessage() {
-  const message = document.getElementById('username').value;
-  const messagesRef = ref(database, 'messages/');
-  const newMessageRef = push(messagesRef);
-  set(newMessageRef, {
-    text: message
-  });
-  document.getElementById('message').value = '';
+const auth = getAuth(app);
+const database = getDatabase(app);
+
+// Authentication functions
+function signUp() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log('Sign Up Successful:', user);
+    })
+    .catch((error) => {
+      console.error('Error signing up:', error.message);
+    });
 }
   </script>
   <script src="app.js"></script>
