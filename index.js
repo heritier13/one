@@ -22,6 +22,7 @@ function fn1(name){
     username:name,
     email:email
   })
+  window.alert("byanze")
   
 }
 writeUserData('1' ,'zecha')
