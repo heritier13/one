@@ -74,39 +74,10 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
-        let messagesRef = firebase.database()
-            .ref('Collected Data');
-         
-        document.getElementById('contactForm')
-            .addEventListener('submit', submitForm);
- 
-        function submitForm(e) {
-            e.preventDefault();
- 
-            // Get values
-            let name = getInputVal('name');
-            let email = getInputVal('email');
- 
-            saveMessage(name, email);
-            document.getElementById('contactForm').reset();
-        }
- 
-        // Function to get form values
-        function getInputVal(id) {
-            return document.getElementById(id).value;
-        }
- 
-        // Save message to firebase
-        function saveMessage(name, email) {
-            let newMessageRef = messagesRef.push();
-            newMessageRef.set({
-                name: name,
-                email: email,
-            }
-            window.alert("byabaye")
-            );
-            
-        }
+
+        String someValue = "some value";
+        database.child("restaurants").child("awpjawpdaw").setValue(someValue);
+   
     </script>
 </body>
  
