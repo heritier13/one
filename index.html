@@ -21,41 +21,25 @@
     </div>
     
 </body>
+<script type="module" src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
 <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBd1kXVO9VeXqFVXxERnCUyEKHBlrwwRzA",
-      authDomain: "echo-dee33.firebaseapp.com",
-      projectId: "echo-dee33",
-      storageBucket: "echo-dee33.firebasestorage.app",
-      messagingSenderId: "318164043775",
-      appId: "1:318164043775:web:4aaa785306672006f989ca"
-    };
-    
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Authentication functions
-function signUp() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log('Sign Up Successful:', user);
-    })
-    .catch((error) => {
-      console.error('Error signing up:', error.message);
-    });
-}
-  </script>
-  <script src="app.js"></script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBd1kXVO9VeXqFVXxERnCUyEKHBlrwwRzA",
+    authDomain: "echo-dee33.firebaseapp.com",
+    databaseURL: "https://echo-dee33-default-rtdb.firebaseio.com",
+    projectId: "echo-dee33",
+    storageBucket: "echo-dee33.firebasestorage.app",
+    messagingSenderId: "318164043775",
+    appId: "1:318164043775:web:4aaa785306672006f989ca"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script> 
 </html>
